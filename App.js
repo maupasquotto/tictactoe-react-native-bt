@@ -14,8 +14,8 @@ import {Button, StyleSheet, Text, TouchableHighlight, View} from 'react-native';
 // }
 
 export default class App extends React.Component {
-    _onPress() {
-        alert('oi')
+    static _onPress() {
+        alert('oi');
     }
 
     render() {
@@ -23,23 +23,39 @@ export default class App extends React.Component {
             <View style={styles.mainWrapper}>
                 {/* Game row 1 */}
                 <View style={styles.row}>
-                    <TouchableHighlight onPress={this._onPress}>
-                        <View style={styles.gridSquare}><Text style={styles.txtStyle}>sdfghjk</Text></View>
+                    <TouchableHighlight onPress={App._onPress}>
+                        <View style={[styles.gridSquare, styles.borderRight, styles.borderBottom]}><Text style={styles.txtStyle}>.</Text></View>
                     </TouchableHighlight>
-                    <View style={styles.gridSquare}><Text style={styles.txtStyle}> </Text></View>
-                    <View style={styles.gridSquare}><Text style={styles.txtStyle}> </Text></View>
+                    <TouchableHighlight onPress={App._onPress}>
+                        <View style={[styles.gridSquare, styles.borderRight, styles.borderBottom]}><Text style={styles.txtStyle}>.</Text></View>
+                    </TouchableHighlight>
+                    <TouchableHighlight onPress={App._onPress}>
+                        <View style={[styles.gridSquare, styles.borderBottom]}><Text style={styles.txtStyle}>.</Text></View>
+                    </TouchableHighlight>
                 </View>
                 {/* Game row 2 */}
                 <View style={styles.row}>
-                    <View style={styles.gridSquare}><Text style={styles.txtStyle}> </Text></View>
-                    <View style={styles.gridSquare}><Text style={styles.txtStyle}> </Text></View>
-                    <View style={styles.gridSquare}><Text style={styles.txtStyle}> </Text></View>
+                    <TouchableHighlight onPress={App._onPress}>
+                        <View style={[styles.gridSquare, styles.borderRight, styles.borderBottom]}><Text style={styles.txtStyle}>.</Text></View>
+                    </TouchableHighlight>
+                    <TouchableHighlight onPress={App._onPress}>
+                        <View style={[styles.gridSquare, styles.borderRight, styles.borderBottom]}><Text style={styles.txtStyle}>.</Text></View>
+                    </TouchableHighlight>
+                    <TouchableHighlight onPress={App._onPress}>
+                        <View style={[styles.gridSquare, styles.borderBottom]}><Text style={styles.txtStyle}>.</Text></View>
+                    </TouchableHighlight>
                 </View>
                 {/* Game row 3 */}
                 <View style={styles.row}>
-                    <View style={styles.gridSquare}><Text style={styles.txtStyle}> </Text></View>
-                    <View style={styles.gridSquare}><Text style={styles.txtStyle}> </Text></View>
-                    <View style={styles.gridSquare}><Text style={styles.txtStyle}> </Text></View>
+                    <TouchableHighlight onPress={App._onPress}>
+                        <View style={[styles.gridSquare, styles.borderRight]}><Text style={styles.txtStyle}>.</Text></View>
+                    </TouchableHighlight>
+                    <TouchableHighlight onPress={App._onPress}>
+                        <View style={[styles.gridSquare, styles.borderRight]}><Text style={styles.txtStyle}>.</Text></View>
+                    </TouchableHighlight>
+                    <TouchableHighlight onPress={App._onPress}>
+                        <View style={[styles.gridSquare]}><Text style={styles.txtStyle}>.</Text></View>
+                    </TouchableHighlight>
                 </View>
             </View>
         );
@@ -50,10 +66,19 @@ const styles = StyleSheet.create({
     gridSquare: {
         height: 70,
         width: 70,
-        backgroundColor: '#C0C0C0',
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'center'
 
+    },
+
+    borderRight: {
+        borderColor: '#000000',
+        borderRightWidth: 1
+    },
+
+    borderBottom: {
+        borderColor: '#000000',
+        borderBottomWidth: 1
     },
 
     row: {
@@ -64,8 +89,7 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: 'column',
         justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: 'yellow'
+        alignItems: 'center'
     },
 
     txtStyle: {
