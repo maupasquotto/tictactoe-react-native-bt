@@ -1,22 +1,14 @@
 import React from 'react';
+import TicTacToe from './TicTacToeClass';
 import {Button, StyleSheet, Text, TouchableHighlight, View} from 'react-native';
-
-// export default class App extends React.Component {
-//   render() {
-//     return (
-//       <View style={styles.container}>
-//         <Text>Open up App.js to start working on your app!</Text>
-//         <Text>Changes you make will automatically reload.</Text>
-//         <Text>Shake your phone to open the developer menu.</Text>
-//       </View>
-//     );
-//   }
-// }
+import * as ToastAndroid from "react-native/Libraries/Components/ToastAndroid/ToastAndroid.android";
 
 export default class App extends React.Component {
     static _onPress() {
-        alert('oi');
+        // alert('oi');
+        ToastAndroid.show('A pikachu appeared nearby !', ToastAndroid.SHORT);
     }
+
 
     render() {
         return (
