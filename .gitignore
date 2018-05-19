@@ -216,3 +216,6 @@ jsconfig.json
 example/yarn.lock
 example/package-lock.json
 /package-lock.json
+
+# CUSTOM
+MYREADME.md
