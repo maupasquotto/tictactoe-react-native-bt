@@ -96,7 +96,7 @@ export default class TicTacToe extends React.Component
         /* Check whether nobody won */
         for (let i = 0; i < 3; i++) {
             for (let x = 0; x < 3; x++) {
-                if (gameBoard[0][0] === '') {
+                if (gameBoard[i][x] === '') {
                     return false;
                 }
             }
@@ -248,7 +248,7 @@ export default class TicTacToe extends React.Component
                         </TouchableHighlight>
                     </View>
                 </View>
-                <View style={{flex: 1}}>
+                <View>
                     <Button title="Reset" onPress={() => {this.resetGame()}} />
                 </View>
             </View>
