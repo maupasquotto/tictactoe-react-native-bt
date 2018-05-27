@@ -39,7 +39,7 @@ export default class TicTacToe extends React.Component
     {
         /* Call super class and reset game */
         super();
-        this.resetGame();
+        // this.resetGame();
     }
 
     /**
