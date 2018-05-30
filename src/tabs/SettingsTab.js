@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { StyleSheet, View, Button, Text } from "react-native";
 
-export default class Settings extends Component {
-    render() {
-        const { navigate } = this.props.navigation;
+export default class SettingsTab extends Component {
 
+
+    render() {
         return (
             <View style={styles.container}>
                 <Text style={styles.header}>
@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#FFF',
         alignItems:'center',
-        justifyItems: 'center'
+        justifyContent: 'center'
     },
     header: {
         fontSize: 20,
